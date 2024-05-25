@@ -39,28 +39,28 @@
         {% endif %}
     </div>
 
-
-    {% comment %} get data from database {% endcomment %}
-    <div>
-        {% if news %}
-            <h2 style="text-align: center;">All News</h2>
-            <hr>
-            <ul>
-                {% for news in news %}
-                    <li style="text-align: center;">
-                        <img src="{{ news.image_url.url}}" class="d-block w-100" alt="News Image" style="max-width: 100%; margin-bottom: 10px; border-radius: 5px; width: 240px; height: 240px;">
-                        <h3>{{ news.news_title }}</h3>
-                        <p>{{ news.description }}</p>
-                        <a href="{{ news.link }}">{{ news.link }}</a>
-                        <p>Published Date: {{ news.published_date }}</p>
-                        <!-- Add more details as needed -->
-                    </li>
-                    <hr>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No stored news available.</p>
-        {% endif %}
-    </div>
+{##}
+{#    {% comment %} get data from database {% endcomment %}#}
+{#    <div>#}
+{#        {% if news %}#}
+{#            <h2 style="text-align: center;">All News</h2>#}
+{#            <hr>#}
+{#            <ul>#}
+{#                {% for news in news %}#}
+{#                    <li style="text-align: center;">#}
+{#                        <img src="{{ news.image_url.url}}" class="d-block w-100" alt="News Image" style="max-width: 100%; margin-bottom: 10px; border-radius: 5px; width: 240px; height: 240px;">#}
+{#                        <h3>{{ news.news_title }}</h3>#}
+{#                        <p>{{ news.description }}</p>#}
+{#                        <a href="{{ news.link }}">{{ news.link }}</a>#}
+{#                        <p>Published Date: {{ news.published_date }}</p>#}
+{#                        <!-- Add more details as needed -->#}
+{#                    </li>#}
+{#                    <hr>#}
+{#                {% endfor %}#}
+{#            </ul>#}
+{#        {% else %}#}
+{#            <p>No stored news available.</p>#}
+{#        {% endif %}#}
+{#    </div>#}
 
 {% endblock %}

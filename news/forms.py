@@ -1,5 +1,6 @@
 from django import forms
 
+
 class RSSFeedSearchForm(forms.Form):
     query = forms.CharField(label='Query', max_length=100, widget=forms.DateInput(attrs={
                                                                                     'class': 'form-control'}))

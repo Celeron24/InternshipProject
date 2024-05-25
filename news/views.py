@@ -1,3 +1,4 @@
+from datetime import date
 from dateutil import parser as date_parser
 from .forms import RSSFeedSearchForm, ArchiveNewsSearchForm
 from .models import NewsArticle
@@ -8,6 +9,87 @@ from django.shortcuts import render
 import feedparser
 from django.utils.text import slugify
 
+
+def archive(request):
+    form = ArchiveNewsSearchForm(request.POST or None)
+    archived_news = None
+    news = NewsArticle.objects.all()
+    if request.method == 'POST':
+        form = ArchiveNewsSearchForm(request.POST)
+        if form.is_valid():
+            filter_archive_date = form.cleaned_data['filter_archive_date']
+            # Ensure filter_archive_date is a date object
+            if isinstance(filter_archive_date, date):
+                archived_news = NewsArticle.objects.filter(published_date=filter_archive_date)
+    return render(request, 'newshub/archived_news.html', {'form': form, 'archived_news': archived_news, 'news': news})
+
+
+def parse_date(date_str):
+    try:
+        parsed_date = date_parser.parse(date_str)
+        return parsed_date.date()
+    except ValueError:
+        return None
+
+
+def extract_image_url(entry):
+    # Check if 'summary' field exists and extract image URL from it
+    if 'summary' in entry:
+        summary = entry['summary']
+        # Extracting image URL from the summary
+        start_index = summary.find('<img src="') + len('<img src="')
+        end_index = summary.find('"', start_index)
+        image_url = summary[start_index:end_index]
+        return image_url
+    return None
+
+
+def search_feed(feed, query, start_date, end_date):
+    results = []
+    for entry in feed.entries:
+        published_date = parse_date(entry.published)
+        if published_date and start_date <= published_date <= end_date:
+            if query.lower() in entry.title.lower() or (entry.summary and query.lower() in entry.summary.lower()):
+                # Extract image URL
+                image_url = extract_image_url(entry)
+                entry['image_url'] = image_url  # Add image URL to the entry dictionary
+                results.append(entry)
+    return results
+
+
+def rss_feed_search(request):
+    form = RSSFeedSearchForm(request.POST or None)
+    search_results = []
+
+    if request.method == 'POST' and form.is_valid():
+        query = form.cleaned_data['query']
+        start_date = form.cleaned_data['start_date']
+        end_date = form.cleaned_data['end_date']
+        rss_urls = [
+            "https://feeds.bbci.co.uk/news/rss.xml?edition=int",
+            "https://www.yahoo.com/news/rss",
+            "https://www.thenews.com.pk/rss/1/1",
+            "https://www.thenews.com.pk/rss/1/8",
+            "https://www.thenews.com.pk/rss/2/14",
+            "https://feeds.bbci.co.uk/news/technology/rss.xml",
+            "https://feeds.bbci.co.uk/news/rss.xml",
+            "https://feeds.bbci.co.uk/news/world/rss.xml",
+            "https://feeds.bbci.co.uk/news/uk/rss.xml",
+        ]
+
+        for rss_url in rss_urls:
+            try:
+                feed = feedparser.parse(rss_url)
+                if feed.status == 200:
+                    search_results.extend(search_feed(feed, query, start_date, end_date))
+            except Exception:
+                pass
+
+    context = {
+        'form': form,
+        'search_results': search_results,
+    }
+    return render(request, 'newshub/search.html', context)
 
 def save_image_from_url(url, title):
     response = requests.get(url)
@@ -159,84 +241,3 @@ def latin_america(request):
     rss_urls = ["https://feeds.bbci.co.uk/news/world/latin_america/rss.xml"]
     entries = fetch_rss_entries(rss_urls)
     return render(request, 'newshub/LatinAmerica.html', {'entries': entries, 'form': form})
-
-
-def archive(request):
-    form = ArchiveNewsSearchForm(request.POST or None)
-    archived_news = None
-    news = NewsArticle.objects.all()
-    if request.method == 'POST':
-        form = ArchiveNewsSearchForm(request.POST)
-        if form.is_valid():
-            filter_archive_date = form.cleaned_data['filter_archive_date']
-            archived_news = NewsArticle.objects.filter(published_date__date=filter_archive_date)
-
-    return render(request, 'newshub/archived_news.html', {'form': form, 'archived_news': archived_news, 'news': news})
-
-
-def parse_date(date_str):
-    try:
-        parsed_date = date_parser.parse(date_str)
-        return parsed_date.date()
-    except ValueError:
-        return None
-
-
-def extract_image_url(entry):
-    # Check if 'summary' field exists and extract image URL from it
-    if 'summary' in entry:
-        summary = entry['summary']
-        # Extracting image URL from the summary
-        start_index = summary.find('<img src="') + len('<img src="')
-        end_index = summary.find('"', start_index)
-        image_url = summary[start_index:end_index]
-        return image_url
-    return None
-
-
-def search_feed(feed, query, start_date, end_date):
-    results = []
-    for entry in feed.entries:
-        published_date = parse_date(entry.published)
-        if published_date and start_date <= published_date <= end_date:
-            if query.lower() in entry.title.lower() or (entry.summary and query.lower() in entry.summary.lower()):
-                # Extract image URL
-                image_url = extract_image_url(entry)
-                entry['image_url'] = image_url  # Add image URL to the entry dictionary
-                results.append(entry)
-    return results
-
-
-def rss_feed_search(request):
-    form = RSSFeedSearchForm(request.POST or None)
-    search_results = []
-
-    if request.method == 'POST' and form.is_valid():
-        query = form.cleaned_data['query']
-        start_date = form.cleaned_data['start_date']
-        end_date = form.cleaned_data['end_date']
-        rss_urls = [
-            "https://feeds.bbci.co.uk/news/rss.xml?edition=int",
-            "https://www.yahoo.com/news/rss",
-            "https://www.thenews.com.pk/rss/1/1",
-            "https://www.thenews.com.pk/rss/1/8",
-            "https://www.thenews.com.pk/rss/2/14",
-            "https://feeds.bbci.co.uk/news/technology/rss.xml",
-            "https://feeds.bbci.co.uk/news/rss.xml",
-            "https://feeds.bbci.co.uk/news/world/rss.xml",
-            "https://feeds.bbci.co.uk/news/uk/rss.xml",
-        ]
-
-        for rss_url in rss_urls:
-            try:
-                feed = feedparser.parse(rss_url)
-                if feed.status == 200:
-                    search_results.extend(search_feed(feed, query, start_date, end_date))
-            except Exception:
-                pass
-
-    context = {
-        'form': form,
-        'search_results': search_results,
-    }
-    return render(request, 'newshub/search.html', context)
