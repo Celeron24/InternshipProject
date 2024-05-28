@@ -2,12 +2,12 @@
 from wagtail_modeladmin.options import ModelAdmin, modeladmin_register
 from .models import NewsArticle
 
-class NewsArticleAdmin(ModelAdmin):
+class NewsArticleModelAdmin(ModelAdmin):
     model = NewsArticle
     menu_label = 'News Articles'
-    menu_icon = 'doc-full'  # Change as needed
-    list_display = ('title', 'published_date')
-    search_fields = ('title', 'description')
+    menu_icon = 'doc-full-inverse'  # Change this to the appropriate icon
+    list_display = ('news_title', 'published_date', 'category')
+    search_fields = ('news_title', 'description')
+    list_filter = ('category',)
 
-# Register the ModelAdmin class with Wagtail
-modeladmin_register(NewsArticleAdmin)
+modeladmin_register(NewsArticleModelAdmin)
