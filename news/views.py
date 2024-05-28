@@ -122,6 +122,7 @@ def fetch_rss_entries(rss_urls):
 
 def index(request):
     form = RSSFeedSearchForm(request.POST or None)
+    first_article = NewsArticle.objects.last()
     rss_urls = [
         "https://feeds.bbci.co.uk/news/rss.xml",
         "https://feeds.bbci.co.uk/news/world/rss.xml",
@@ -129,7 +130,7 @@ def index(request):
         "https://feeds.bbci.co.uk/news/health/rss.xml",
     ]
     entries = fetch_rss_entries(rss_urls)
-    return render(request, 'newshub/index.html', {'entries': entries, 'form': form})
+    return render(request, 'newshub/index.html', {'entries': entries, 'form': form, 'first_article': first_article})
 
 
 def health(request):
