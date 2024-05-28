@@ -91,6 +91,7 @@ def rss_feed_search(request):
     }
     return render(request, 'newshub/search.html', context)
 
+
 def save_image_from_url(url, title):
     response = requests.get(url)
     if response.status_code == 200:
