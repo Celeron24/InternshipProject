@@ -67,7 +67,6 @@ def rss_feed_search(request):
         end_date = form.cleaned_data['end_date']
         rss_urls = [
             "https://feeds.bbci.co.uk/news/rss.xml?edition=int",
-            "https://www.yahoo.com/news/rss",
             "https://www.thenews.com.pk/rss/1/1",
             "https://www.thenews.com.pk/rss/1/8",
             "https://www.thenews.com.pk/rss/2/14",

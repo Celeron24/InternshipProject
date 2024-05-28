@@ -4,7 +4,7 @@
 
     <!--slider start-->
     <div class="container mt-4">
-        <h1 class="text-center mb-4">Last 24 Hours BBC News</h1>
+        <h1 class="text-center mb-4">Latest News</h1>
         <div class="row">
             <!-- Slider on the left -->
             <div class="col-md-6">
@@ -14,9 +14,9 @@
                             <div class="carousel-item {% if forloop.first %}active{% endif %}">
                                 <div style="margin-bottom: 30px; padding: 20px; border-radius: 5px; background-color: #f9f9f9;">
                                     {% if entry.image_url %}
-                                        <img src="{{ entry.image_url }}" class="d-block w-100" alt="News Image" style="max-width: 100%; margin-bottom: 10px; border-radius: 5px; width: 240px; height: 240px;">
+                                      <a href="{{ entry.link }}">   <img src="{{ entry.image_url }}" class="d-block w-100" alt="News Image" style="max-width: 100%; margin-bottom: 10px; border-radius: 5px; width: 240px; height: 240px;">
                                     {% endif %}
-                                    <h2 style="margin-top: 0;"><a href="{{ entry.link }}" target="_blank" style="color: #007bff; text-decoration: none;">{{ entry.title }}</a></h2>
+                                   <a href="{{ entry.link }}"> <h2 style="margin-top: 0;">{{ entry.title }}</h2></a>
                                     <p style="margin: 0; color: #666;">{{ entry.description }}</p>
                                     {% if entry.published_date %}
                                         <p style="margin: 0; color: #888;">Published on: {{ entry.published_date }}</p>
@@ -42,12 +42,11 @@
                     <div class="col-md-12">
                         <div class="card mb-4 box-shadow">
                             {% if first_article.image_url %}
-                                <img style="height: 50%; width:50%;" class="card-img-top" src="{{ first_article.image_url.url }}" alt="Card image cap">
+                                <a href="{{ entry.link }}"> <img class="card-img-top" src="{{ first_article.image_url.url }}" alt="Card image cap"></a>
                             {% endif %}
                             <div class="card-body">
-                                <h5 class="card-title"><a href="{{ entry.link }}" target="_blank" style="color: #007bff; text-decoration: none;">{{ first_article.title|slice:":50" }}</a></h5>
+                              <a href="{{ entry.link }}">  <h5 class="card-title">{{ first_article.title|slice:":50" }}</h5></a>
                                 <p class="card-text">{{ first_article.description|slice:":50" }}</p>
-
                             </div>
                         </div>
                     </div>
@@ -64,10 +63,10 @@
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
                         {% if entry.image_url %}
-                            <img class="card-img-top" src="{{ entry.image_url }}" alt="Card image cap">
+                        <a href="{{ entry.link }}">    <img class="card-img-top" src="{{ entry.image_url }}" alt="Card image cap">
                         {% endif %}
                         <div class="card-body">
-                            <h5 class="card-title"><a href="{{ entry.link }}" target="_blank" style="color: #007bff; text-decoration: none;">{{ entry.title }}</a></h5>
+                          <a href="{{ entry.link }}">  <h5 class="card-title">{{ entry.title }}</h5></a>
                             <p class="card-text">{{ entry.summary }}</p>
                             <div class="d-flex justify-content-between align-items-center">
 
