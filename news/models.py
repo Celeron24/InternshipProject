@@ -1,9 +1,7 @@
 from django.db import models
 from wagtail.models import Page
-from wagtail.fields import RichTextField
 from wagtail.admin.panels import FieldPanel
-from wagtail.admin.panels import PageChooserPanel
-from wagtail.images.models import Image
+
 
 class NewsArticle(Page):
     published_date = models.DateField()
