@@ -42,7 +42,7 @@
                     <div class="col-md-12">
                         <div class="card mb-4 box-shadow">
                             {% if first_article.image_url %}
-                                <img class="card-img-top" src="{{ first_article.image_url.url }}" alt="Card image cap">
+                                <img style="height: 50%; width:50%;" class="card-img-top" src="{{ first_article.image_url.url }}" alt="Card image cap">
                             {% endif %}
                             <div class="card-body">
                                 <h5 class="card-title"><a href="{{ entry.link }}" target="_blank" style="color: #007bff; text-decoration: none;">{{ first_article.title|slice:":50" }}</a></h5>
