@@ -2,8 +2,8 @@ from django.core.management.base import BaseCommand
 from django.utils.text import slugify
 import feedparser
 from dateutil import parser as date_parser
-from mysite.news.models import NewsArticle, Page  # Adjust import according to your app structure
-from mysite.news.utils import save_image_from_url  # Adjust import according to your utility function
+from news.models import NewsArticle, Page  # Adjust import according to your app structure
+from news.utils import save_image_from_url  # Adjust import according to your utility function
 
 
 class Command(BaseCommand):
