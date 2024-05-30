@@ -1,9 +1,6 @@
 from django.db import models
 from wagtail.models import Page
-from wagtail.fields import RichTextField
 from wagtail.admin.panels import FieldPanel
-from wagtail.admin.panels import PageChooserPanel
-from wagtail.images.models import Image
 
 
 class NewsArticle(Page):
@@ -12,6 +9,26 @@ class NewsArticle(Page):
     description = models.TextField()
     link = models.URLField()
     image_url = models.ImageField(upload_to='images/', null=True, blank=True)
+    category = models.CharField(max_length=50, choices=[
+        ('business', 'Business'),
+        ('world', 'World'),
+        ('health', 'Health'),
+        ('England', 'England'),
+        ('Asia', 'Asia'),
+        ('Africa', 'Africa'),
+        ('entertainment', 'entertainment'),
+        ('Europe', 'Europe'),
+        ('LatinAmerica', 'LatinAmerica'),
+        ('MiddleEast', 'MiddleEast'),
+        ('NorthernIreland', 'NorthernIreland'),
+        ('Politics', 'Politics'),
+        ('Scotland', 'Scotland'),
+        ('Sports', 'Sports'),
+        ('Technology', 'Technology'),
+        ('UsCanada', 'UsCanada'),
+        ('Wales', 'Wales'),
+        ('general', 'General'),
+    ], default='general')
 
     content_panels = Page.content_panels + [
         FieldPanel('published_date'),
@@ -19,4 +36,5 @@ class NewsArticle(Page):
         FieldPanel('description'),
         FieldPanel('link'),
         FieldPanel('image_url'),
+        FieldPanel('category'),
     ]
