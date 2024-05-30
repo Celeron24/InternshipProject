@@ -7,12 +7,13 @@
     {% if search_results %}
         <ul class="list-group">
             {% for result in search_results %}
-                <li class="list-group-item">
+                <li class="list-group-item"> <a href="{{ result.link }}">
                     <h3 style="margin-bottom: 10px;">{{ result.title }}</h3>
                     {% if result.image_url %}
-                        <img src="{{ result.image_url }}" alt="Image" style="max-width: 100%; margin-bottom: 10px;">
+                        <img src="{{ result.image_url.url }}" alt="Image" style="max-width: 100%; margin-bottom: 10px;">
                     {% endif %}
                     <p style="margin-bottom: 0;">{{ result.description | striptags }}</p>
+                </a>
                 </li>
             {% endfor %}
         </ul>

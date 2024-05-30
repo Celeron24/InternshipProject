@@ -65,24 +65,11 @@ def rss_feed_search(request):
         query = form.cleaned_data['query']
         start_date = form.cleaned_data['start_date']
         end_date = form.cleaned_data['end_date']
-        rss_urls = [
-            "https://feeds.bbci.co.uk/news/rss.xml?edition=int",
-            "https://www.thenews.com.pk/rss/1/1",
-            "https://www.thenews.com.pk/rss/1/8",
-            "https://www.thenews.com.pk/rss/2/14",
-            "https://feeds.bbci.co.uk/news/technology/rss.xml",
-            "https://feeds.bbci.co.uk/news/rss.xml",
-            "https://feeds.bbci.co.uk/news/world/rss.xml",
-            "https://feeds.bbci.co.uk/news/uk/rss.xml",
-        ]
 
-        for rss_url in rss_urls:
-            try:
-                feed = feedparser.parse(rss_url)
-                if feed.status == 200:
-                    search_results.extend(search_feed(feed, query, start_date, end_date))
-            except Exception:
-                pass
+        search_results = NewsArticle.objects.filter(
+           title__icontains=query,
+           published_date__range=[start_date, end_date]
+        )
 
     context = {
         'form': form,
