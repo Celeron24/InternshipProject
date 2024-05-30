@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a1d3f1b6-714b-4aa9-a40c-655e361f6b0d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mysite.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/migrations/0002_create_homepage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/migrations/0003_homepage_body.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/css/welcome_page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/home_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/welcome_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/a-simple-guide-to-the-4-july-general-election.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/an-abuse-by-people-supposedly-there-to-care_mA273nn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/ancelottis-secret-weapon-his-son.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/april-a-washout-for-shops-as-sales-slump_ZMUDYnl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/are-weight-loss-injections-the-answer-to-obesity_uMj1u9m.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/army-backtracks-on-teen-rejected-over-breast-cancer-gene_IddVH5s.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/as-trump-trial-hurtles-towards-verdict-are-americans-paying-attention.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/assisted-dying-debate-terrifying-for-disabled-says-liz-carr_DQn2Y6t.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/astrazeneca-to-withdraw-covid-vaccine_UnmH0QP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/at-least-16-dead-as-cyclone-hits-bangladesh-and-india.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/bbc-presenter-taken-off-flight-over-childs-allergy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/beckham-scores-euros-deal-with-china-tech-giant.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/beckham-scores-euros-deal-with-china-tech-giant_MtlaOMq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/blood-compensation-comes-too-late-for-my-husband_iWhnpm0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/boos-and-jeers-for-trump-at-libertarian-convention.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/boy-5-is-worlds-youngest-to-use-bionic-hero-arm_i3LNNc1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/british-museum-gems-for-sale-on-ebay-how-a-theft-was-exposed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/building-society-buys-co-op-bank-for-780m_U6sCsnk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/can-health-secretary-name-nhs-trusts-performing-well_oIPO3Xr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/cctv-reveals-lion-taking-dog-from-family-home_FW4XbTX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/chelsea-in-talks-with-leicester-boss-maresca.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/children-used-as-guinea-pigs-in-clinical-trials_u2QShs2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/chris-mason-starmer-emphasises-small-town-roots-in-first-big-campaign-speech.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/comedian-paul-smith-from-online-jokes-to-playing-arenas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/corrupt-ship-inspectors-demand-our-food-and-cargo_sDeDfzK.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/cow-dungs-key-role-in-indias-energy-industry_t0MkmHR.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/cynthia-voted-for-nelson-mandela-now-shes-abandoning-his-successors_HZxbuOV.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/deadly-landslide-threatens-thousands-more-as-hopes-for-survivors-fade.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/deadly-landslide-threatens-thousands-more-as-hopes-for-survivors-fade_BpwhTfZ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/delhi-hospital-where-babies-died-lacked-licence.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/diane-abbott-labour-race-row-probe-finished-in-december-bbc-told.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/do-we-need-a-celebration-day-for-loved-ones-who-have-died.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/download-now_qpdZuBE.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/ealing-beavers-dams-canals-and-perhaps-babies.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/egyptian-soldier-killed-in-israel-border-incident.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/election-poll-tracker-how-do-the-parties-compare_lnmptti.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/electioncast-pebbledash-semis-and-dribbling.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/energy-bills-predicted-to-fall-by-7-in-july_Bxwg8mI.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/energy-bills-to-fall-again-from-july-under-new-cap_MW1YdHF.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/ex-post-office-boss-accused-of-being-in-la-la-land_Oe5Z3rI.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/ex-post-office-boss-vennells-five-big-inquiry-moments_Bcr7Ux5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/finances-a-dark-cloud-over-election-campaign-says-ifs_JLXkFjw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/five-surprisingly-simple-ways-to-optimise-your-diet_em4pNrh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/force-russia-to-make-peace-zelensky-urges-west.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/force-russia-to-make-peace-zelensky-urges-west_DFbU0eE.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/french-town-reels-from-fortune-teller-scandal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/garden-floods-show-need-to-work-with-nature_cy0Uv0X.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/general-election-will-not-delay-infected-blood-compensation_vE7nHtE.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/google-to-make-pixel-phones-and-drones-in-india_e5627Ea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/harvard-students-stage-walkout-at-graduation-ceremony_FC4QmzL.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/hear-the-sound-as-billions-of-cicadas-emerge-in-us_XMROy3g.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/horrendous-birth-experience-left-me-in-therapy_lJicPTw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/how-175-british-children-were-infected-with-hiv_t20wcG7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/how-do-i-know-if-my-smart-meter-is-broken_uDeRCyI.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/how-fast-are-prices-rising-in-the-uk_pcGk6rG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/how-much-are-prices-rising-for-you-try-our-calculator_jxLovDa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/how-much-do-junior-doctors-really-get-paid_BB99J0b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/how-much-does-uni-cost-and-will-i-earn-more-if-i-go_aOmsIso.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/how-much-does-uni-cost-and-will-i-earn-more-if-i-go_vLJJ9Az.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/how-quantum-physics-could-revolutionise-everything_7eoowQQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/how-rain-can-make-you-happier-and-healthier.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/how-should-countries-deal-with-falling-birth-rates_Ikn5OKD.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/how-to-get-a-job-six-expert-tips-for-finding-work_9I1MUaq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/hpv-vaccine-stops-90-of-cervical-cancer-cases_tSpKWsI.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/i-embrace-my-alopecia-but-id-love-my-old-hair-back_wsIZ0Us.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/i-lost-mum-dad-and-sister-to-hiv-in-blood-scandal_29PL0gA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/i-lost-my-mum-dad-and-baby-sister-to-hiv-in-infected-blood-scandal_ofuvur9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/i-put-off-starting-a-family-because-of-a-300-rent-rise.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/i-put-off-starting-a-family-because-of-a-300-rent-rise_6U5keQi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/i-waited-two-years-for-a-new-knee-i-was-lucky.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/i-was-lost-dancing-with-fans-hiding-the-pain.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/if-they-see-us-they-will-bomb-us-watch-as-bbc-reaches-a-hidden-wars-jungle-front-_V7IiH8V.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/if-they-see-us-they-will-bomb-us-watch-as-bbc-reaches-a-hidden-wars-jungle-front-_q79DmOA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/infected-blood-inquiry-five-things-we-have-learned_NWbJ6Yh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/infected-blood-victims-could-get-2m-compensation_MfzaYOW.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/is-chinas-bubble-tea-bubble-about-to-burst_oZ8Gdgy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/israel-continues-rafah-strikes-after-dozens-killed-in-sunday-bombing.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/israel-continues-rafah-strikes-after-dozens-killed-in-sunday-bombing_5WVjQtV.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/its-possible-to-regain-the-forest-we-once-had_d7PFoJe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/jeremy-bowen-ukraine-faces-its-worst-crisis-since-the-war-began.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/jeremy-bowen-ukraine-faces-its-worst-crisis-since-the-war-began_F0lR6Lo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/joy-and-disbelief-as-post-office-convictions-quashed_lwA5nCk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/junior-doctors-in-england-agree-to-talks-with-government_2EMtwkM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/kenyan-leader-says-private-jet-cheaper-option.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/labour-mp-kevin-brennan-says-he-is-standing-down.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/labour-wins-backing-of-more-than-100-business-bosses.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/labour-wins-backing-of-more-than-100-business-bosses_HyBJSGh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/lib-dems-pledge-to-fix-scotlands-dental-deserts.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/longest-serving-flight-attendant-dies-at-88.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/low-expectations-and-high-hopes-for-djokovic-day-three-preview.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/lucy-letby-denied-permission-for-baby-murders-appeal_YgSLy5F.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/luxury-perfumes-linked-to-child-labour-bbc-finds.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/luxury-perfumes-linked-to-child-labour-bbc-finds_G3sdg0n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/marian-keyes-i-would-never-have-been-a-writer-if-i-was-still-drinking.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/marthas-rule-mother-encouraged-as-hospitals-sign-up.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/melanoma-skin-cancer-cases-rising-in-uk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/mike-lynch-defends-himself-in-autonomy-fraud-trial_l23MZz0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/modis-party-volunteers-targeting-100000-people-a-day.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/musk-opposes-us-tariffs-on-chinese-electric-cars_vXZzR30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/my-flats-service-charge-has-doubled-to-8000.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/new-video-shows-arrest-of-golfer-scottie-scheffler_TeZuNpz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/newly-verified-caravaggio-goes-on-show-in-madrid.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/nicki-minaj-apologises-for-postponed-manchester-show.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/no-fault-renters-evictions-bill-runs-out-of-time_P0V7kYC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/papua-new-guinea-fears-thousands-buried-after-landslide.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/people-are-just-not-worried-about-being-scammed_8lsGQRW.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/people-with-hiv-can-be-sperm-and-egg-donors_Bzarh6N.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/playing-wimbledon-not-a-good-idea-as-nadal-eyes-olympics.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/polling-guru-crunches-the-numbers-in-60-seconds.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/pope-allegedly-used-derogatory-term-for-gay-people.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/pope-allegedly-used-derogatory-term-for-gay-people_0SXHbOv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/priced-out-of-home-ownership-it-makes-me-want-to-throw-up.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/priced-out-of-home-ownership-it-makes-me-want-to-throw-up_zkiRcbz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/rare-illness-dad-could-bleed-to-death-at-any-moment_yZZQRgZ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/royal-mail-investigated-by-ofcom-for-missing-delivery-targets_5zyooHk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/royal-navy-warship-deployed-to-protect-trade-routes.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/scarlett-johanssons-ai-row-has-echoes-of-silicon-valleys-bad-old-days_3hNz6Dp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/search-for-meteor-fragments-after-bright-fireball.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/shop-price-rises-back-to-normal-says-retail-body.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/shop-price-rises-back-to-normal-says-retail-body_oUekmD3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/singapore-air-ceo-thanks-staff-after-turbulent-flight.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/south-africans-still-battling-economic-apartheid-30-years-on.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/south-africans-still-battling-economic-apartheid-30-years-on_2gMserE.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/stolen-treasures-scandal-at-the-british-museum.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/sunak-and-starmer-have-more-in-common-than-you-might-think.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/sunak-reveals-he-fasts-at-beginning-of-the-week_RSYbZhX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/surgeon-left-a-specimen-bag-inside-me-after-hernia-op_4A71txu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/survivor-of-mexico-armed-attack-given-protection.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/tackling-water-shortages-with-star-wars-tech.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/tackling-water-shortages-with-star-wars-tech_1RyMkAk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/the-ex-con-illegal-guns-and-the-fear-of-kenyas-police.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/the-influencers-rallying-south-africas-youth-to-vote.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/the-man-who-turned-his-dead-father-into-a-chatbot_Qi8iuD2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/the-post-brexit-hard-sell-for-british-food-in-asia_UfUhbse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/the-rise-of-swedens-super-rich_ft9nYif.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/there-are-loads-of-people-that-vape-at-school_1dk7Rsa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/these-elephants-are-dying-on-rail-tracks-can-ai-save-them_zbh8NyT.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/thousands-of-americans-without-power-due-to-severe-weather.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/thousands-of-americans-without-power-due-to-severe-weather_Rx73Kot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/tories-make-tax-pledge-on-pensions-as-business-leaders-back-labour.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/tories-pledge-triple-lock-plus-pension-allowance.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/tories-pledge-triple-lock-plus-pension-allowance_ohDYFDY.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/uk-borders-prepare-for-eu-fingerprint-travel-rule-change.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/uk-borders-prepare-for-eu-fingerprint-travel-rule-change_xzCagwu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/uk-covid-inquiry-comes-to-scotland-in-90-seconds_RdBdx8o.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/uks-oldest-lido-to-remain-closed-amid-flood-damage.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/us-actor-shot-dead-during-attempted-car-theft.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/us-sues-in-bid-to-break-up-ticketmaster-owner_0URjYsK.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/uup-to-vote-against-catastrophic-budget.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/vennells-told-not-to-make-post-office-front-page-news_yOSVZoo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/vet-prescription-fees-could-be-capped-by-watchdog_cFEXz7n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/watch-airport-employee-informs-nicki-minaj-of-bag-search.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/watch-bbcs-jeremy-bowen-at-the-site-of-kharkiv-strike.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/watch-cheese-rollers-risk-grim-injuries-at-annual-race.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/watch-smoke-and-flames-at-deadly-india-arcade-fire.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/what-are-my-rights-if-my-flight-is-cancelled-or-delayed_ZJ9yAKG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/what-happens-if-trump-is-convicted-in-hush-money-trial.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/what-is-happening-to-gas-and-electricity-bills_6PdkPZ9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/what-is-pregabalin-and-why-can-it-be-dangerous_cemc8F9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/what-is-the-infected-blood-scandal-and-will-there-be-compensation_2cHVWla.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/what-is-the-law-on-assisted-suicide-and-euthanasia_nDg6YP2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/what-is-the-new-vaping-tax-and-when-will-it-start_1Z39gqQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/what-is-the-tory-national-service-plan-for-18-year-olds.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/what-will-trump-jury-decide-here-are-the-three-options.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/when-toone-and-russo-hid-stanway-in-a-suitcase.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/when-will-interest-rates-come-down_56Ml6Ia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/when-will-interest-rates-come-down_IiwtDqt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/when-will-interest-rates-come-down_ky7EUVC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/when-will-interest-rates-come-down_zKY1kvq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/which-laws-were-passed-in-final-days-of-parliament.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/who-gets-15-hours-of-free-childcare-and-how-do-i-apply_ztydoho.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/why-are-we-so-ill-the-working-age-health-crisis_eKmSS17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/why-now-uk-teens-respond-to-tory-national-service-scheme.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/why-technology-has-not-transformed-building_xeg7BQc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/will-ai-dream-up-the-hit-tv-shows-of-the-future_EsBEMYi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/worlds-rarest-album-to-go-on-display-in-australia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/wu-tang-clan-worlds-rarest-album-to-go-on-display-in-australia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/media/images/gaza.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/media/images/tshirt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/original_images/IMG-20211124-WA0015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/original_images/IMG-20211124-WA0015_rydDeIc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/.idea/mysite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/.idea/mysite.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/news/management/commands/import_rss.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/news/management/commands/import_rss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/news/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/management/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/management/commands/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/management/commands/import_rss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/migrations/0002_newsarticle_category.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/css/style.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/lib/easing/easing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/lib/easing/easing.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/lib/owlcarousel/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/lib/owlcarousel/assets/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/lib/owlcarousel/assets/owl.carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/lib/owlcarousel/assets/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/lib/owlcarousel/assets/owl.theme.default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/lib/owlcarousel/assets/owl.theme.default.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/lib/owlcarousel/assets/owl.theme.green.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/lib/owlcarousel/assets/owl.theme.green.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/lib/owlcarousel/assets/owl.video.play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/lib/owlcarousel/owl.carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/lib/owlcarousel/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_breadcrumb.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_button-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_card.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_close.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_code.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_custom-forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_functions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_input-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_jumbotron.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_media.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_print.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_progress.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_root.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_spinners.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_toasts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_transitions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/bootstrap-grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/bootstrap-reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/bootstrap.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_background-variant.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_border-radius.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_box-shadow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_caret.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_deprecate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_gradients.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_grid-framework.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_hover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_image.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_lists.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_nav-divider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_reset-text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_resize.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_screen-reader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_size.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_table-row.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_text-emphasis.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_text-hide.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_text-truncate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_transition.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/mixins/_visibility.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_align.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_background.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_borders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_display.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_embed.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_flex.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_interactions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_overflow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_position.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_screenreaders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_shadows.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_sizing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_spacing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_stretched-link.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/utilities/_visibility.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/bootstrap/scss/vendor/_rfs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/static/scss/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/boot/boot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/LatinAmerica.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/africa.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/archived_news.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/asia.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/business.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/england.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/entertainment_arts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/europ.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/health.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/middleeast.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/nothernireland.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/politics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/scotland.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/sports.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/technology.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/uscanada.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/newshub/wales.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/templates/search/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/views.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/mysite" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2h97wFbnf7jjTidhiC7bb8jlyJA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Projects/internshipProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-7a29c1521ef0-c986f194a52a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.11799.298" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1d3f1b6-714b-4aa9-a40c-655e361f6b0d" name="Changes" comment="" />
+      <created>1716994675275</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716994675275</updated>
+      <workItem from="1716994676279" duration="427000" />
+      <workItem from="1717060111876" duration="6318000" />
+      <workItem from="1717074388179" duration="3287000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
