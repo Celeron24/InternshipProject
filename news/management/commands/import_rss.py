@@ -1,3 +1,4 @@
+import re
 from django.core.management.base import BaseCommand
 from django.utils.text import slugify
 import feedparser
@@ -12,7 +13,6 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         rss_urls = {
             "https://feeds.bbci.co.uk/news/rss.xml": "general",
-            "https://feeds.bbci.co.uk/news/health/rss.xml": "Health",
             "https://rss.cnn.com/rss/edition.rss": "general",
             "https://www.yahoo.com/news/rss": "general",
             "https://www.thenews.com.pk/rss/1/1": "general",
@@ -20,21 +20,7 @@ class Command(BaseCommand):
             "https://www.thenews.com.pk/rss/2/14": "general",
             "https://feeds.bbci.co.uk/news/world/rss.xml": "world",
             "https://feeds.bbci.co.uk/news/business/rss.xml": "business",
-
-            "https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml": "entertainment",
-            "https://feeds.bbci.co.uk/news/world/asia/rss.xml": "Asia",
-            "https://feeds.bbci.co.uk/news/world/africa/rss.xml": "Africa",
-            "https://feeds.bbci.co.uk/news/technology/rss.xml": "Technology",
-            "https://feeds.bbci.co.uk/news/world/europe/rss.xml": "Europe",
-            "http://newsrss.bbc.co.uk/rss/sportonline_uk_edition/cricket/rss.xml": "Sports",
-            "https://feeds.bbci.co.uk/news/politics/rss.xml": "Politics",
-            "https://feeds.bbci.co.uk/news/wales/rss.xml": "Wales",
-            "https://feeds.bbci.co.uk/news/scotland/rss.xml": "Scotland",
-            "https://feeds.bbci.co.uk/news/northern_ireland/rss.xml": "NorthernIreland",
-            "https://feeds.bbci.co.uk/news/england/rss.xml": "England",
-            "https://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml": "UsCanada",
-            "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml": "MiddleEast",
-            "https://feeds.bbci.co.uk/news/world/latin_america/rss.xml": "LatinAmerica",
+            "https://feeds.bbci.co.uk/news/health/rss.xml": "health",
             # Add more RSS feed URLs and their categories here
         }
 
@@ -52,9 +38,17 @@ class Command(BaseCommand):
                 published_date_str = entry.get('published')
                 published_date = date_parser.parse(published_date_str) if published_date_str else None
 
-                image_url = None
+                # Extract image URL based on feed structure
                 if 'media_thumbnail' in entry and entry['media_thumbnail']:
                     image_url = entry['media_thumbnail'][0]['url']
+                elif 'media:content' in entry and entry['media:content']:
+                    image_url = entry['media:content']['url']
+                elif 'media:thumbnail' in entry and entry['media:thumbnail']:
+                    image_url = entry['media:thumbnail']['url']
+                else:
+                    cdata_content = entry.get('description')
+                    match = re.search(r'<img src="([^"]+)"', cdata_content) if cdata_content else None
+                    image_url = match.group(1) if match else None
 
                 # Check if the news article already exists
                 news_article = NewsArticle.objects.child_of(home_page).filter(news_title=title).first()
