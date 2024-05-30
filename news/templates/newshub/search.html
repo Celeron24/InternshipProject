@@ -12,8 +12,9 @@
                     {% if result.image_url %}
                         <img src="{{ result.image_url.url }}" alt="Image" style="max-width: 100%; margin-bottom: 10px;">
                     {% endif %}
-                    <p style="margin-bottom: 0;">{{ result.description | striptags }}</p>
                 </a>
+                    <p style="margin-bottom: 0;">{{ result.description | striptags }}</p>
+
                 </li>
             {% endfor %}
         </ul>
