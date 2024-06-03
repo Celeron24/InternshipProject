@@ -22,4 +22,5 @@ urlpatterns = [
     path('technology/', views.technology, name='technology'),
     path('LatinAmerica/', views.latin_america, name='LatinAmerica'),
     path('search/', views.rss_feed_search, name='rss_feed_search'),
+
 ]
