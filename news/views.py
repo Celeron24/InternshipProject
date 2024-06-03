@@ -4,7 +4,7 @@ from .forms import RSSFeedSearchForm, ArchiveNewsSearchForm
 from django.core.files.base import ContentFile
 from django.utils.dateparse import parse_date
 import requests
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 import feedparser
 from .models import NewsArticle, SearchQuery, ContactDetailsPage
 from django.utils.text import slugify
@@ -12,6 +12,7 @@ from django.shortcuts import render
 from django.core.mail import send_mail
 from .forms import RSSFeedSearchForm
 from .models import SearchQuery
+from wagtail.models import Page
 
 
 def archive(request):
@@ -77,13 +78,14 @@ def rss_feed_search(request):
 
         if not search_results:
             # If no search results found, prompt the user for contact details
-            return render(request, 'newshub/contact_details.html', {'query': query})
+            return render(request, 'newshub/subscription_confirmation.html', {'query': query})
 
     context = {
         'form': form,
         'search_results': search_results,
     }
     return render(request, 'newshub/search.html', context)
+
 
 def save_contact_details(request):
     if request.method == 'POST':
@@ -95,8 +97,17 @@ def save_contact_details(request):
         # Create a SearchQuery instance
         search_query = SearchQuery.objects.create(query=query, email=email, username=username, phone_number=phone_number)
 
-        # Create a ContactDetailsPage instance and associate it with the SearchQuery
-        contact_details_page = ContactDetailsPage.objects.create(search_query=search_query)
+        # Find or create the parent page where ContactDetailsPage instances should be created
+        parent_page = get_object_or_404(Page, slug='contact-details-index')  # Adjust the slug as needed
+
+        # Create and save the ContactDetailsPage instance
+        contact_details_page = ContactDetailsPage(
+            search_query=search_query,
+            title=f'Contact Details for {username}',
+            slug=f'contact-details-{search_query.id}'
+        )
+        parent_page.add_child(instance=contact_details_page)
+        contact_details_page.save_revision().publish()
 
         # Send confirmation email
         send_mail(

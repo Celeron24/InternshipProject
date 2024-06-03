@@ -38,6 +38,8 @@ class NewsArticle(Page):
         FieldPanel('image_url'),
         FieldPanel('category'),
     ]
+
+
 class SearchQuery(models.Model):
     query = models.CharField(max_length=255)
     email = models.EmailField()
@@ -48,18 +50,15 @@ class SearchQuery(models.Model):
     def __str__(self):
         return f"{self.username}'s query: {self.query}"
 
-class ContactDetailsPage(Page):
-    # You can define fields specific to this page if needed
-    # For example:
-    # intro = models.CharField(max_length=255)
 
-    # This model can be used to store the user's contact details
+class ContactDetailsPage(Page):
+
     search_query = models.ForeignKey(
         SearchQuery,
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name='contact_details_pages'
+        related_name='save_contact_details'
     )
 
     content_panels = Page.content_panels + [
