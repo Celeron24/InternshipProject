@@ -1,13 +1,17 @@
 from datetime import date
 from dateutil import parser as date_parser
 from .forms import RSSFeedSearchForm, ArchiveNewsSearchForm
-from .models import NewsArticle
 from django.core.files.base import ContentFile
 from django.utils.dateparse import parse_date
 import requests
 from django.shortcuts import render
 import feedparser
+from .models import NewsArticle, SearchQuery, ContactDetailsPage
 from django.utils.text import slugify
+from django.shortcuts import render
+from django.core.mail import send_mail
+from .forms import RSSFeedSearchForm
+from .models import SearchQuery
 
 
 def archive(request):
@@ -71,11 +75,41 @@ def rss_feed_search(request):
            published_date__range=[start_date, end_date]
         )
 
+        if not search_results:
+            # If no search results found, prompt the user for contact details
+            return render(request, 'newshub/contact_details.html', {'query': query})
+
     context = {
         'form': form,
         'search_results': search_results,
     }
     return render(request, 'newshub/search.html', context)
+
+def save_contact_details(request):
+    if request.method == 'POST':
+        query = request.POST.get('query')
+        email = request.POST.get('email')
+        username = request.POST.get('username')
+        phone_number = request.POST.get('phone_number')
+
+        # Create a SearchQuery instance
+        search_query = SearchQuery.objects.create(query=query, email=email, username=username, phone_number=phone_number)
+
+        # Create a ContactDetailsPage instance and associate it with the SearchQuery
+        contact_details_page = ContactDetailsPage.objects.create(search_query=search_query)
+
+        # Send confirmation email
+        send_mail(
+            'Subscription Confirmation',
+            f'Thank you for your interest in our news service. You will receive updates related to the query: {query}',
+            'from@example.com',
+            [email],
+            fail_silently=False,
+        )
+
+        return render(request, 'newshub/subscription_confirmation.html')
+
+    return render(request, 'newshub/search.html')
 
 
 def save_image_from_url(url, title):
