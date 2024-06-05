@@ -6,12 +6,11 @@ from django.utils.dateparse import parse_date
 import requests
 from django.shortcuts import render, get_object_or_404
 import feedparser
-from .models import NewsArticle, SearchQuery, ContactDetailsPage
+from .models import NewsArticle, ContactDetailsPage, NewsRequest
 from django.utils.text import slugify
 from django.shortcuts import render
 from django.core.mail import send_mail
 from .forms import RSSFeedSearchForm
-from .models import SearchQuery
 from wagtail.models import Page
 
 
@@ -89,30 +88,28 @@ def rss_feed_search(request):
 
 def save_contact_details(request):
     if request.method == 'POST':
-        query = request.POST.get('query')
         email = request.POST.get('email')
         username = request.POST.get('username')
         phone_number = request.POST.get('phone_number')
 
-        # Create a SearchQuery instance
-        search_query = SearchQuery.objects.create(query=query, email=email, username=username, phone_number=phone_number)
-
         # Find or create the parent page where ContactDetailsPage instances should be created
-        parent_page = get_object_or_404(Page, slug='contact-details-index')  # Adjust the slug as needed
+        parent_page = get_object_or_404(Page, slug='home')  # Adjust the slug as needed
 
         # Create and save the ContactDetailsPage instance
         contact_details_page = ContactDetailsPage(
-            search_query=search_query,
             title=f'Contact Details for {username}',
-            slug=f'contact-details-{search_query.id}'
+            slug=f'contact-details-{username}'
         )
+        contact_details_page.email = email
+        contact_details_page.username = username
+        contact_details_page.phone_number = phone_number
         parent_page.add_child(instance=contact_details_page)
         contact_details_page.save_revision().publish()
 
         # Send confirmation email
         send_mail(
             'Subscription Confirmation',
-            f'Thank you for your interest in our news service. You will receive updates related to the query: {query}',
+            f'Thank you for providing your contact details, {username}.',
             'from@example.com',
             [email],
             fail_silently=False,

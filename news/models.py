@@ -1,4 +1,5 @@
 from django.db import models
+from wagtail.fields import RichTextField
 from wagtail.models import Page
 from wagtail.admin.panels import FieldPanel
 
@@ -40,9 +41,9 @@ class NewsArticle(Page):
     ]
 
 
-class SearchQuery(models.Model):
+class NewsRequest(models.Model):
     query = models.CharField(max_length=255)
-    email = models.EmailField()
+    email = models.EmailField(blank=False, default=None)
     username = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=20)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -52,15 +53,20 @@ class SearchQuery(models.Model):
 
 
 class ContactDetailsPage(Page):
-
-    search_query = models.ForeignKey(
-        SearchQuery,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name='save_contact_details'
-    )
+    # intro = RichTextField(null=True, blank=True)
+    email = models.EmailField(null=True, blank=True)
+    username = models.CharField(max_length=100, null=True, blank=True)
+    phone_number = models.IntegerField(blank=True, null=True)
 
     content_panels = Page.content_panels + [
-        # Define panels for additional fields if needed
+        FieldPanel('email'),
+        FieldPanel('username'),
+        FieldPanel('phone_number'),
     ]
+
+    # def get_context(self, request):
+    #     context = super().get_context(request)
+    #     context['news_requests'] = NewsRequest.objects.all()
+    #     return context
+
+
