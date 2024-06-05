@@ -6,10 +6,9 @@
         <p>Please provide your contact details to receive updates related to your query.</p>
         <form method="post" action="{% url 'save_contact_details' %}">
             {% csrf_token %}
-            <div class="form-group">
-                <label for="query">Query:</label>
-                <textarea class="form-control" id="query" name="query" required>{{ query }}</textarea>
-            </div>
+            <input type="hidden" name="query" value="{{ query }}">
+            <input type="hidden" name="start_date" value="{{ start_date }}">
+            <input type="hidden" name="end_date" value="{{ end_date }}">
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" id="email" name="email" required>

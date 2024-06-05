@@ -41,32 +41,22 @@ class NewsArticle(Page):
     ]
 
 
-class NewsRequest(models.Model):
-    query = models.CharField(max_length=255)
-    email = models.EmailField(blank=False, default=None)
-    username = models.CharField(max_length=100)
-    phone_number = models.CharField(max_length=20)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"{self.username}'s query: {self.query}"
-
 
 class ContactDetailsPage(Page):
-    # intro = RichTextField(null=True, blank=True)
+    query = models.CharField(max_length=255,default="")
     email = models.EmailField(null=True, blank=True)
     username = models.CharField(max_length=100, null=True, blank=True)
-    phone_number = models.IntegerField(blank=True, null=True)
+    phone_number = models.CharField(max_length=20, null=True, blank=True)
+    start_date = models.DateField(null=True, blank=True)
+    end_date = models.DateField(null=True, blank=True)
 
     content_panels = Page.content_panels + [
+        FieldPanel('query'),
         FieldPanel('email'),
         FieldPanel('username'),
         FieldPanel('phone_number'),
+        FieldPanel('start_date'),
+        FieldPanel('end_date'),
     ]
-
-    # def get_context(self, request):
-    #     context = super().get_context(request)
-    #     context['news_requests'] = NewsRequest.objects.all()
-    #     return context
 
 

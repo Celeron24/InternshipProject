@@ -1,5 +1,5 @@
 from wagtail_modeladmin.options import ModelAdmin, modeladmin_register
-from .models import NewsArticle, NewsRequest, ContactDetailsPage
+from .models import NewsArticle, ContactDetailsPage
 
 
 class NewsArticleModelAdmin(ModelAdmin):

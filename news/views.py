@@ -4,9 +4,11 @@ from .forms import RSSFeedSearchForm, ArchiveNewsSearchForm
 from django.core.files.base import ContentFile
 from django.utils.dateparse import parse_date
 import requests
+import datetime
 from django.shortcuts import render, get_object_or_404
 import feedparser
-from .models import NewsArticle, ContactDetailsPage, NewsRequest
+from django.contrib import messages
+from .models import NewsArticle, ContactDetailsPage
 from django.utils.text import slugify
 from django.shortcuts import render
 from django.core.mail import send_mail
@@ -71,13 +73,17 @@ def rss_feed_search(request):
         end_date = form.cleaned_data['end_date']
 
         search_results = NewsArticle.objects.filter(
-           title__icontains=query,
-           published_date__range=[start_date, end_date]
+            title__icontains=query,
+            published_date__range=[start_date, end_date]
         )
 
         if not search_results:
             # If no search results found, prompt the user for contact details
-            return render(request, 'newshub/subscription_confirmation.html', {'query': query})
+            return render(request, 'newshub/subscription_confirmation.html', {
+                'query': query,
+                'start_date': start_date,
+                'end_date': end_date
+            })
 
     context = {
         'form': form,
@@ -88,9 +94,27 @@ def rss_feed_search(request):
 
 def save_contact_details(request):
     if request.method == 'POST':
+        query = request.POST.get('query')
+        start_date = request.POST.get('start_date')
+        end_date = request.POST.get('end_date')
         email = request.POST.get('email')
         username = request.POST.get('username')
         phone_number = request.POST.get('phone_number')
+
+        # Convert start_date and end_date to datetime objects using dateutil.parser.parse
+        if start_date:
+            try:
+                start_date = date_parser.parse(start_date).date()
+            except ValueError:
+                messages.error(request, 'Invalid start date format.')
+                return render(request, 'newshub/search.html')
+
+        if end_date:
+            try:
+                end_date = date_parser.parse(end_date).date()
+            except ValueError:
+                messages.error(request, 'Invalid end date format.')
+                return render(request, 'newshub/search.html')
 
         # Find or create the parent page where ContactDetailsPage instances should be created
         parent_page = get_object_or_404(Page, slug='home')  # Adjust the slug as needed
@@ -98,11 +122,14 @@ def save_contact_details(request):
         # Create and save the ContactDetailsPage instance
         contact_details_page = ContactDetailsPage(
             title=f'Contact Details for {username}',
-            slug=f'contact-details-{username}'
+            slug=f'contact-details-{username}',
+            query=query,
+            email=email,
+            username=username,
+            phone_number=phone_number,
+            start_date=start_date,
+            end_date=end_date
         )
-        contact_details_page.email = email
-        contact_details_page.username = username
-        contact_details_page.phone_number = phone_number
         parent_page.add_child(instance=contact_details_page)
         contact_details_page.save_revision().publish()
 
@@ -115,6 +142,10 @@ def save_contact_details(request):
             fail_silently=False,
         )
 
+        # Display success message
+        messages.success(request, 'Contact details saved successfully.')
+
+        # Redirect or render a success template
         return render(request, 'newshub/subscription_confirmation.html')
 
     return render(request, 'newshub/search.html')
